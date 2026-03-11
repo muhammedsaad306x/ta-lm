@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en" style="background-color: #f9f9f9; margin: 0; padding: 0;">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/Logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Life Makers</title>
+    <!-- Default Open Graph & Twitter Card (in initial HTML so share crawlers see them without JS) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Life Makers | صناع الحياة" />
+    <meta property="og:title" content="Life Makers | صناع الحياة" />
+    <meta property="og:description" content="صناع الحياة - منصة خيرية لإحداث أثر إيجابي في المجتمع" />
+    <meta property="og:url" content="https://www.lifemakers.org/" />
+    <meta property="og:image" content="https://www.lifemakers.org/Logo.png" />
+    <meta property="og:image:secure_url" content="https://www.lifemakers.org/Logo.png" />
+    <meta property="og:image:alt" content="Life Makers | صناع الحياة" />
+    <meta property="og:locale" content="ar_AR" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@LifeMakersOrg" />
+    <meta name="twitter:title" content="Life Makers | صناع الحياة" />
+    <meta name="twitter:description" content="صناع الحياة - منصة خيرية لإحداث أثر إيجابي في المجتمع" />
+    <meta name="twitter:image" content="https://www.lifemakers.org/Logo.png" />
+    <meta name="twitter:image:alt" content="Life Makers | صناع الحياة" />
+    <!-- Critical CSS: Hero section styles for LCP optimization -->
+    <!-- Inline critical CSS to ensure hero section renders immediately -->
+    <style>
+      /* Critical CSS for Hero Section - LCP element */
+      .hero-section-critical {
+        position: relative;
+        min-height: 330px;
+        max-height: 700px;
+        width: 100%;
+        background: linear-gradient(90deg, #e8f4f8 0.03%, #014976 24.98%);
+        padding: 3rem 1.5rem;
+        margin: 0 auto;
+        overflow: visible;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .hero-content-critical {
+        max-width: 98%;
+        margin: 0 auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 2rem;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+      }
+      .hero-image-container-critical {
+        width: 100%;
+        max-width: 100%;
+      }
+      .hero-image-critical {
+        max-width: 100%;
+        max-height: 300px;
+        height: auto;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: contain;
+        display: block;
+      }
+      @media (min-width: 480px) {
+        .hero-section-critical {
+          min-height: 420px;
+          max-height: 800px;
+          padding: 4.5rem 2rem;
+        }
+        .hero-image-critical {
+          max-height: 400px;
+        }
+      }
+      @media (min-width: 768px) {
+        .hero-section-critical {
+          min-height: 480px;
+          max-height: 800px;
+          padding: 5rem 4rem;
+        }
+        .hero-content-critical {
+          flex-direction: row;
+          justify-content: space-between;
+          gap: 4rem;
+        }
+      .hero-image-critical {
+        max-height: 500px;
+        }
+      }
+      @media (max-width: 479px) {
+        .hero-section-critical {
+          min-height: 260px;
+          padding: 2rem 0.5rem;
+        }
+      }
+      /* Critical CSS for Hero Title - LCP Element */
+      /* OPTIMIZATION: Use system font stack first to avoid font loading delay */
+      /* This ensures text renders immediately without waiting for web fonts */
+      .hero-title-critical {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        line-height: 1.2;
+        text-align: center;
+        color: white;
+        /* System fonts first - renders immediately, no resource load delay */
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+        margin: 0 0 1rem 0;
+        padding: 0;
+        display: block;
+        opacity: 1;
+        visibility: visible;
+        /* Ensure text is visible immediately */
+        font-display: swap;
+      }
+      @media (min-width: 480px) {
+        .hero-title-critical {
+          font-size: 2.5rem;
+        }
+      }
+      @media (min-width: 768px) {
+        .hero-title-critical {
+          font-size: 3rem;
+          text-align: right;
+        }
+      }
+      .hero-text-container-critical {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+      }
+      @media (min-width: 768px) {
+        .hero-text-container-critical {
+          width: 50%;
+          align-items: flex-start;
+          text-align: right;
+        }
+      }
+    </style>
+    
+    <!-- Resource Hints for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://lifemakers.org" crossorigin />
+    <link rel="dns-prefetch" href="https://connect.facebook.net" />
+    
+    <!-- Static LCP image preload - First slide from carousel (PSI wants static, not dynamic) -->
+    <!-- Using first slide statically: Palm Endowment campaign image -->
+    <link
+      rel="preload"
+      as="image"
+      href="https://lifemakers.org/webps/carousel/1afcffae-3c44-48df-83f7-2fa0d22224bc.webp"
+      fetchpriority="high"
+    />
+    
+    <!-- Fonts - Load asynchronously to prevent blocking FCP -->
+    <!-- OPTIMIZATION: Use media="print" trick to load fonts without blocking render -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;700&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;700&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+    <!--app-head-->
+    <!-- <script
+      src="https://qnbalahli.test.gateway.mastercard.com/static/checkout/checkout.min.js"
+      data-error="errorCallback"
+      data-cancel="cancelCallback"
+    ></script> -->
+    <script type="module" crossorigin src="/assets/index-B9j8TIkH.js"></script>
+    <link rel="preload" href="/assets/carousel-vendor-2d6kTBOk.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="/assets/carousel-vendor-2d6kTBOk.css"></noscript>
+    <link rel="preload" href="/assets/form-vendor-Bbgo5x5y.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="/assets/form-vendor-Bbgo5x5y.css"></noscript>
+    <link rel="preload" href="/assets/map-vendor-CIGW-MKW.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="/assets/map-vendor-CIGW-MKW.css"></noscript>
+    <link rel="preload" href="/assets/index-CBGpjfJd.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="/assets/index-CBGpjfJd.css"></noscript>
+  </head>
+  <body style="margin: 0; padding: 0; background-color: #f9f9f9 !important; overflow-x: hidden;">
+    <!-- OPTIMIZATION: Prevent white page flash - Set background color immediately -->
+    <!-- This ensures users see a colored background instead of white while React loads -->
+    <style>
+      /* Prevent white flash - apply background immediately */
+      html {
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9 !important;
+        overflow-x: hidden;
+        /* OPTIMIZATION: Ensure html is visible immediately - no white flash */
+        opacity: 1;
+        visibility: visible;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9 !important;
+        overflow-x: hidden;
+        /* OPTIMIZATION: Ensure body is visible immediately - no white flash */
+        opacity: 1;
+        visibility: visible;
+      }
+      #root {
+        background-color: #f9f9f9;
+        /* OPTIMIZATION: Ensure root is visible immediately to prevent white flash */
+        opacity: 1;
+        visibility: visible;
+        position: relative;
+      }
+      /* ✅ FIX: REMOVED #root:empty::before - causes flash during hydration */
+      /* React temporarily empties nodes during hydration, triggering this pseudo-element */
+      /* We already have loader overlay + root background + body background - no need for this */
+      /* ✅ FIX: Bulletproof loader CSS - industry standard pattern */
+      /* Stay in DOM, fade opacity only, use pointer-events: none */
+      #initial-loading {
+        position: fixed;
+        inset: 0;
+        width: 100vw;
+        height: 100dvh;
+        background-color: #0a4976;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 99999;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transition: opacity 0.4s ease-out, background-color 0.4s ease-out;
+        will-change: opacity;
+      }
+      /* When hidden - fade to page background so we never reveal empty/white root */
+      #initial-loading[data-hidden="true"] {
+        opacity: 0;
+        pointer-events: none;
+        visibility: visible;
+        background-color: #f9f9f9; /* Match body - smooth blue→gray, no white flash */
+      }
+      @keyframes scalePulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+      }
+      .initial-loading-logo {
+        width: 331px;
+        height: 363px;
+        object-fit: contain;
+        filter: brightness(0) invert(1);
+        animation: scalePulse 1.5s ease-in-out infinite;
+        transform-origin: center;
+        display: block;
+      }
+      @media (max-width: 768px) {
+        .initial-loading-logo {
+          width: 200px;
+          height: 220px;
+        }
+      }
+    </style>
+    <!-- ✅ FIX: Loading screen - rendered first, stays in DOM, only fades -->
+    <!-- This matches LoadingScreen.jsx component styling -->
+    <div id="initial-loading">
+      <!-- Simple spinner for immediate FCP - LoadingScreen component will hydrate this -->
+      <div style="width: 80px; height: 80px; border: 4px solid rgba(112, 112, 112, 0.2); border-top-color: #ffffff; border-radius: 50%; animation: spin 1s linear infinite;"></div>
+    </div>
+    <style>
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    </style>
+    <!-- OPTIMIZATION: Root container for React -->
+    <!-- SSR will inject content here, preventing white page -->
+    <!-- OPTIMIZATION: Inline style ensures background is always set, even before CSS loads -->
+    <div id="root" style="background-color: #f9f9f9; position: relative;">
+      <!--app-html-->
+      <noscript>
+        <div class="hero-section-critical" style="min-height: 330px; display: flex; align-items: center; justify-content: center; background: linear-gradient(90deg, #e8f4f8 0.03%, #014976 24.98%);">
+          <div style="color: white; text-align: center; padding: 2rem;">
+            <div class="hero-title-critical" style="font-size: 2rem; margin-bottom: 1rem;">Life Makers</div>
+            <div style="opacity: 0.9;">Please enable JavaScript to view this site.</div>
+          </div>
+        </div>
+      </noscript>
+    </div>
+    <!--hydration-script-->
+    <!-- OPTIMIZATION: Defer Facebook SDK to prevent blocking FCP -->
+    <!-- Skip on HTTP - FB.getLoginStatus requires HTTPS (https://developers.facebook.com/blog/post/2018/06/08/enforce-https-facebook-login/) -->
+    <script>
+      (function() {
+        if (typeof location !== "undefined" && location.protocol !== "https:") return;
+        if (typeof requestIdleCallback !== "undefined") {
+          requestIdleCallback(function() {
+            var script = document.createElement("script");
+            script.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v21.0&appId=1556027885764306&autoLogAppEvents=1";
+            script.async = true;
+            script.defer = true;
+            script.crossOrigin = "anonymous";
+            document.body.appendChild(script);
+          }, { timeout: 3000 });
+        } else {
+          setTimeout(function() {
+            var script = document.createElement("script");
+            script.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v21.0&appId=1556027885764306&autoLogAppEvents=1";
+            script.async = true;
+            script.defer = true;
+            script.crossOrigin = "anonymous";
+            document.body.appendChild(script);
+          }, 2000);
+        }
+      })();
+    </script>
+  </body>
+</html>
