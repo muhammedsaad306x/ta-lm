@@ -1,1 +1,0 @@
-import{u as s}from"./tanstack-vendor-DVbpgvBY.js";import{bg as t,aH as a}from"./index-Dv1SXuG7.js";import{g as u,C as o}from"./cacheConfig-DLAJO7wI.js";const C=(e=1,r=4)=>s({queryKey:o.NEWS(e,r),queryFn:()=>a({page:e,size:r}),...u("SEMI_STATIC")}),I=(e,r=!0)=>s({queryKey:o.NGO_BY_ID(e),queryFn:()=>t({id:e}),enabled:r&&!!e,...u("SEMI_STATIC")});export{C as a,I as u};
