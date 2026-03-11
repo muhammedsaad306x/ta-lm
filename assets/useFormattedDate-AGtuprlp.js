@@ -1,0 +1,1 @@
+import{u as n}from"./vendor-8UwSOQY7.js";const t=()=>{const{i18n:r}=n();return e=>e?new Date(e).toLocaleDateString(r.resolvedLanguage==="ar"?"ar-EG":"en-US",{year:"numeric",month:"long",day:"numeric"}):""};export{t as u};
